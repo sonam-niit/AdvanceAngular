@@ -1,0 +1,40 @@
+Angular Actually calling its hooks method
+---------------------------------------------
+1. ngOnChanges(): when an input/output binding value changes
+
+2. ngOnInit(): after the first ngOnChanges
+
+3. ngDoCheck():checking developers custom change
+
+4. ngAfterContentInit(): after component content intialization
+(call only once during the lifecycle of component)
+
+5. ngAfterContentChecked(): after every check of component content
+//call once during comp lifecycle after ngAfterContentinit()
+
+flow: first ngDoCheck() --> ngAfterContentInit() --> ngAfterContentChecked()
+
+every time when the ngDoCheck() triggered
+it will call ngAfterContentChecked()
+
+
+6. ngAfterViewInit(): after component's views initialization
+
+call after: ngAfterContentChecked()
+
+7. ngAfterViewChecked(): after every check of a component's view.
+
+called after: ngAfterViewInit() -- first then after every ngAfterContentChecked()
+
+8. ngOnDestroy(): just before the component/directive is destroyed
+
+we can put all out clean up logic inside this destroy method.
+when refresh a page or when closes the browser then it will not call ngOnDestroy
+method.
+
+
+
+
+
+
+
