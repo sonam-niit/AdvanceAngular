@@ -1,0 +1,21 @@
+Angular Material is a collection of Material Design components for Angualr.
+
+Using components we can easily apply the material design.
+
+--> to add  material UI in angular project
+
+ng add @angular/material
+
+==================================================
+
+Angular Material starter components
+
+@angular/material:materialDashboard (Card Based Dashboad Component)
+@angular/material:materialTable: create a component which displays data with data table
+@angular/material:materialNav: component with sideBarNav
+
+How to create a componenet: ng g @angular/material:materialNav --name myNav
+
+====================================================================================
+creating dialog using angular material
+
