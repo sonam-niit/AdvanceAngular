@@ -1,6 +1,13 @@
 <div>
     <h1>UserList</h1>
-    <table mat-table [dataSource]="users" class="mat-elevation-z8">
+    <div>
+        <button mat-raised-button color="primary"
+         (click)="exportTable()">
+        Export My Data
+    </button>
+    </div>
+    <table id="demotable" mat-table 
+    [dataSource]="users" class="mat-elevation-z8">
         
         <!-- <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef>ID</th>

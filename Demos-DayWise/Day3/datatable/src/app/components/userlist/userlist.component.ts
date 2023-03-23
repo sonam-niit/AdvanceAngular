@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/user.service';
+import { TableUtil } from './exporttoExcel';
 
 @Component({
   selector: 'app-userlist',
@@ -14,5 +15,8 @@ export class UserlistComponent {
   constructor(private service:UserService){}
   ngOnInit(){
     this.service.getAllUsers().subscribe(ob=>this.users=ob);
+  }
+  exportTable(){
+    TableUtil.exportToExcel("demotable");
   }
 }

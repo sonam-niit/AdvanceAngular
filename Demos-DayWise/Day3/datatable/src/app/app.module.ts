@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { UserlistComponent } from './components/userlist/userlist.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { DynamicComponent } from './components/dynamic/dynamic.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserlistComponent
+    UserlistComponent,
+    DynamicComponent
   ],
   imports: [
     BrowserModule,
