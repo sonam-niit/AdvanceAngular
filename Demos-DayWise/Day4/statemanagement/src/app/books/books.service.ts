@@ -12,4 +12,7 @@ export class BooksService {
   get(){
     return this.http.get<Books[]>("http://localhost:3000/books");
   }
+  create(payload:Books){
+    return this.http.post("http://localhost:3000/books",payload);
+  }
 }
