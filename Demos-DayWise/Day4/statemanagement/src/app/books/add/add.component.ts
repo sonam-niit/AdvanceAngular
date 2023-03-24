@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { select, Store } from '@ngrx/store';
+import { setAPIStatus } from 'src/app/shared/store/app.action';
 import { selectAppState } from 'src/app/shared/store/app.selector';
 import { Appstate } from 'src/app/shared/store/appstate';
 import { Books } from '../store/books';
@@ -24,8 +25,15 @@ export class AddComponent {
     this.store.dispatch(invokeSaveNewBookApi({newBook: this.bookForm}));
     let apiStatus$= this.appStore.pipe(select(selectAppState))
     apiStatus$.subscribe((apstate)=>{
-      if(apstate.apiStatus='success'){
-        this.appStore.dispatch({apiStatus:{apiResponseMessage:'',apiStatus:''}});
+      if(apstate.apiStatus=='success'){
+        this.appStore.dispatch(
+          setAPIStatus({
+            apiStatus:{
+              apiResponseMessage:'',
+              apiStatus:''
+            }
+          })
+        );
       }
       this.router.navigate(['/']);
     })

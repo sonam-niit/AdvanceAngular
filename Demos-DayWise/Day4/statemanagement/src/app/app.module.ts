@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { BooksModule } from './books/books.module';
 import { StoreModule } from '@ngrx/store';
 import { appReducer } from './shared/store/app.reducer';
+import { FormsModule } from '@angular/forms';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,10 @@ import { appReducer } from './shared/store/app.reducer';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     BooksModule,
-    StoreModule.forRoot({appState:appReducer})
+    StoreModule.forRoot({appState:appReducer}),
+    EffectsModule.forRoot({}),
   ],
   providers: [],
   bootstrap: [AppComponent]

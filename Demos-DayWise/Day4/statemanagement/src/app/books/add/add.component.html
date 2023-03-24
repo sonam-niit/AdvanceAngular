@@ -1,1 +1,17 @@
-<p>add works!</p>
+<div class="container">
+    <form (ngSubmit)="save()">
+        <div>
+            <label>Book Name</label>
+            <input type="text" id="name" name="name" [(ngModel)]="bookForm.name">
+        </div>
+        <div>
+            <label>Book Author</label>
+            <input type="text" id="author" name="author" [(ngModel)]="bookForm.author">
+        </div>
+        <div>
+            <label>Book Cost</label>
+            <input type="text" id="cost" name="cost" [(ngModel)]="bookForm.cost">
+        </div>
+        <input type="submit" value="Save Book">
+    </form>
+</div>
