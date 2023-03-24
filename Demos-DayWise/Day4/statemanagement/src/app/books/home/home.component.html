@@ -1,0 +1,20 @@
+<h1>Books Data</h1>
+<div class="container">
+    <div class="row">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th><th>Name</th><th>Author</th><th>Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let b of books$ | async">
+                    <td>{{b.id}}</td>
+                    <td>{{b.name}}</td>
+                    <td>{{b.author}}</td>
+                    <td>{{b.cost}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
